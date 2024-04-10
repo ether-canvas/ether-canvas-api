@@ -1,0 +1,15 @@
+name: Deploy in Render
+
+on:
+  push:
+    branches:
+      - develop  # Adjust this to match your branch name
+
+jobs:
+  call-api:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Call auto deployment API
+      run: |
+        curl --location 'https://api.render.com/deploy/srv-cob5dr21hbls73amp7m0?key=kAX3ObZUvxw'
